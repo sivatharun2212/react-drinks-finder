@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  background-attachment: fixed;
+  
+
+}
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.searchdiv input {
+  width: 300px;
+  height: 30px;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.377);
+  padding-left: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.searchdiv {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 192, 203, 0.377);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding: 50px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 30px;
+
+}
+
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.377);
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 1px rgba(65, 62, 62, 0.384);
+}
+
+
+
+.cardImg {
+  width: 100%;
+  height: 80%;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.cardTitle {
+  widows: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+@media screen and (max-width: 1046px){
+  .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 250px;
+
+  }
+  .searchdiv input {
+    width: 275px;
+    height: 30px;
+  }
+  
+
+  
+}
+
+@media screen and (max-width: 720px){
+  .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+
+  }
+  .searchdiv input {
+    width: 250px;
+    height: 30px;
+  }
+  
 }
